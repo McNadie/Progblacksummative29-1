@@ -1,0 +1,23 @@
+
+.site-content {
+  background-color: rgb(48, 55, 58)
+}
+
+.main-content {
+  z-index: 2;
+  background-color: rgba(189, 227, 241, 0.8);
+  color: white;
+  border: 1px solid rgba(189, 227, 241, 0.9);
+
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}

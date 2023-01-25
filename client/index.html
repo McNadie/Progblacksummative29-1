@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head>
+        <title>Roll submission</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    </head>
+    <body class="site-content">
+        <h1 style="color:white">Roll submission:</h1>
+        <span style="display:block; height: 30px;"></span>
+        <h4 style="color:white">Choose your area:</h4>
+        <div class="btn-group">
+            <button type="button" id ="Red_Well" onclick="hbsubmit(this)" class="btn btn-danger btn-lg active">Red Well</button>
+            <button type="button" id ="Bucks_Well" onclick="hbsubmit(this)" class="btn btn-primary btn-lg active">Bucks Well</button>
+            <button type="button" id ="St_Johns" onclick="hbsubmit(this)" class="btn btn-success btn-lg active">St Johns</button>
+            <button type="button" id ="Witchurch" onclick="hbsubmit(this)" class="btn btn-light btn-lg active"  style="background-color:yellow">Witchurch</button>
+            <button type="button" id ="Holly_Well" onclick="hbsubmit(this)" class="btn btn-warning btn-lg active">Holly well</button>
+            <button type="button" id ="Stan_Well" onclick="hbsubmit(this)" class="btn btn-dark btn-lg active">Stan Well</button>
+            <button type="button" id ="Whyte_Well" onclick="hbsubmit(this)" class="btn btn-light btn-lg active">Whyte Well</button>
+        </div>
+        
+        <p style="color:white">Houseblock selected:</p>
+        <div id="result" style="color:white"></div>
+        <span style="display:block; height: 50px;"></span>
+        <form id="response">
+            <label id="Officer" style="color:white">Officer Counting:</label>
+            <input type="text" class="form-control" name="Officer">
+            <label id="RC" style="color:white">Roll Count:</label>
+            <input type="text" class="form-control" name="RC">
+            <span style="display:block; height: 70px;"></span>
+            <button type="submit" class="btn btn-info btn-lg">Submit</button>
+        </form>
+        <div id="errormsg" style="color:white;background-color:Red"></div>
+        <span style="display:block; height: 50px;"></span>
+        <h3 style="color:white">Data:</h3>
+
+
+        <table style="color:white" id="Roll_table">
+            <tr>
+              <th>Area</th>
+              <th>Roll Count</th>
+              <th>Officer</th>
+            </tr>
+            <tr>
+              <td>Red Well</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+                <td>Bucks Well</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>St Johns</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Whitchurch</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Holly Well</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Stan Well</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Whyte Well</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        <div id="sum" style="color:white"></div>
+
+        <button type="button" id="clear" onclick="Clear_Roll()" style="background-color:white" class="btn btn-lg">Clear_Roll</button>
+
+
+        <script src="func.js"></script>
+        <script src="Roll_submission.js"></script>
+
+
+    </body>
+</html>

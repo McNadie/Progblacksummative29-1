@@ -1,0 +1,212 @@
+{
+	"info": {
+		"_postman_id": "fced0040-1c20-4e29-9f76-37621bc58163",
+		"name": "Roll Submission",
+		"description": "The Api for submitting recieving and clearing roll with the roll submission page",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25486951"
+	},
+	"item": [
+		{
+			"name": "Load Roll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "Once called this will reload the the current roll submissions into the table on the page"
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8090/Roll/Load",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"Roll",
+								"Load"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "161"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a1-+eJ0xS+VUMKU4y5/CrC09UsIMNg\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 24 Jan 2023 11:45:56 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Red Well\": [\n        \"12\",\n        \"test\"\n    ],\n    \"Bucks Well\": [\n        \"\",\n        \"\"\n    ],\n    \"St Johns\": [\n        \"fsf\",\n        \"test\"\n    ],\n    \"Witchurch\": [\n        \"\",\n        \"\"\n    ],\n    \"Holly Well\": [\n        \"\",\n        \"\"\n    ],\n    \"Stan Well\": [\n        \"\",\n        \"\"\n    ],\n    \"Whyte Well\": [\n        \"12\",\n        \"test\"\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Clear Roll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "This will empty the table of roll so that a new set of values can be inputted. Sometimes the values are returned before being cleared, they will have reset even if the returned values are not empty, calling again will confirm this"
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8090/Roll/Clear",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"Roll",
+								"Clear"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "142"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"8e-vZftNafRM5Eh84Ad49Efs2ba5LE\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 24 Jan 2023 11:47:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Red Well\": [\n        \"\",\n        \"\"\n    ],\n    \"Bucks Well\": [\n        \"\",\n        \"\"\n    ],\n    \"St Johns\": [\n        \"\",\n        \"\"\n    ],\n    \"Witchurch\": [\n        \"\",\n        \"\"\n    ],\n    \"Holly Well\": [\n        \"\",\n        \"\"\n    ],\n    \"Stan Well\": [\n        \"\",\n        \"\"\n    ],\n    \"Whyte Well\": [\n        \"\",\n        \"\"\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Submit Roll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "The roll will be submitted with the body of the post request in the form of {Officer: (officer here), RC: (Roll count here,HB: (houseblock here)}"
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8090/Roll/Submit",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"Roll",
+								"Submit"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "166"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a6-GaQO/q+JDQQK0kR6JWAnVYmNBgU\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 24 Jan 2023 11:47:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Red Well\": [\n        \"\",\n        \"\"\n    ],\n    \"Bucks Well\": [\n        \"\",\n        \"\"\n    ],\n    \"St Johns\": [\n        \"\",\n        \"\"\n    ],\n    \"Witchurch\": [\n        \"\",\n        \"\"\n    ],\n    \"Holly Well\": [\n        \"\",\n        \"\"\n    ],\n    \"Stan Well\": [\n        \"\",\n        \"\"\n    ],\n    \"Whyte Well\": [\n        \"\",\n        \"\"\n    ],\n    \"undefined\": [\n        null,\n        null\n    ]\n}"
+				}
+			]
+		}
+	]
+}
